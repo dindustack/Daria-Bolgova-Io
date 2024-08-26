@@ -57,9 +57,19 @@ nav ul li a {
     grid-row: 3;
 }
 
-#Connect {
+#Skills {
     grid-column: 1;
     grid-row: 4;
+}
+
+#Projects {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+#Connect {
+    grid-column: 1;
+    grid-row: 6;
 }
 
 #Photo {
