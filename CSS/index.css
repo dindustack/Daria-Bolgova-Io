@@ -49,17 +49,17 @@ body {
 
 section {
     padding: 10px;
-    margin: 10px;
+    scroll-margin-top: 80px;
 }
 
 nav {
     position: fixed;
     top: 0;
-    right: 0;
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: transparent;
+    left: 0;
+    width: 100%;
+    padding: 15px;
     z-index: 1000;
+    background-color: var(--background-light);
 }
 
 nav ul {
@@ -67,7 +67,6 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px;
 }
 
 nav ul li a {
@@ -76,14 +75,59 @@ nav ul li a {
     font-family: var(--heading-font);
     font-weight: var(--nav-font-weight);
     font-size: var(--nav-font-size);
+    margin: 0px;
+    padding: 15px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+h1, h2 {
+    font-family: var(--heading-font);
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-left: 70px;
+}
+
+h1 {
+    color: var(--heading-1-light);
+    font-weight: var(--heading-1-font-weight);
+    font-size: var(--heading-1-font-size);
+    text-align: center;
+}
+
+h2 {
+    color: var(--heading-2-light);
+    font-weight: var(--heading-2-font-weight);
+    font-size: var(--heading-2-font-size);
+}
+
+p, ul {
+    color: var(--text-1-light);
+    font-family: var(--text-font);
+    font-weight: var(--text-1-font-weight);
+    font-size: var(--text-1-font-size);
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-left: 70px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 70px;
+    padding: 0;
+}
+
+/* Main Page Layout */
+
 .wrapper {
-    margin-top: 60px; 
+    margin-top: 80px; 
     display: grid;
-    grid-template-columns: 2fr 1.5fr;
-    gap: 20px;
-    grid-template-rows: 50px, 90px, 300px, 30px;
+    grid-template-columns: 2.2fr 1.2fr;
+    grid-template-rows: 50px, 90px, 350px, 30px;
+    gap: 10px;
 }
 
 #Name {
@@ -120,8 +164,8 @@ nav ul li a {
     grid-column: 2;
     grid-row: 1 / 5;
     position: fixed;
-    top: 42%;
-    left: calc(75% - 150px);
+    top: 49%;
+    right: 7%;
     transform: translateY(-50%);
 }
 
@@ -130,46 +174,11 @@ nav ul li a {
     height: auto;
 }
 
-h1, h2 {
-    font-family: "Bona Nova SC", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    margin: 5px;
-}
-
-h1 {
-    color: var(--heading-1-light);
-    font-weight: var(--heading-1-font-weight);
-    font-size: var(--heading-1-font-size);
-    text-align: center;
-}
-
-h2 {
-    color: var(--heading-2-light);
-    font-weight: var(--heading-2-font-weight);
-    font-size: var(--heading-2-font-size);
-}
-
-p, ul {
-    color: var(--text-1-light);
-    font-family: var(--text-font);
-    font-weight: var(--text-1-font-weight);
-    font-size: var(--text-1-font-size);
-    font-optical-sizing: auto;
-    font-style: normal;
-    margin-left: 20px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    margin-left: 20px;
-    padding: 0;
-}
+/* Experience Section Layout */
 
 #Experience .job {
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 70px;
 }
 
 #Experience .job-header {
@@ -240,4 +249,3 @@ ul {
     height: 25px;
     width: auto;
 }
-
