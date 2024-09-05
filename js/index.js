@@ -14,7 +14,6 @@ const githubIconDark = document.getElementById('github-icon-dark');
 themeToggle.addEventListener('click', function() {
     body.classList.toggle('dark-mode');
     
-    // Toggle between light and dark mode icons
     if (body.classList.contains('dark-mode')) {
         darkIcon.style.display = 'none';
         lightIcon.style.display = 'block';
@@ -38,4 +37,9 @@ themeToggle.addEventListener('click', function() {
         githubIconLight.style.display = 'block';
         githubIconDark.style.display = 'none';
     }
+
+    // Toggle sound
+    const sound = document.getElementById('toggle-sound');
+    sound.currentTime = 0;
+    sound.play();
 });
