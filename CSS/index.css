@@ -42,9 +42,17 @@
     --text-2-font-size: 15px;
 }
 
+/* Desktop Style */
+
+/* Light Mode */
+
 body {
     margin: 0;
     background-color: var(--background-light);
+}
+
+#photo-dark, #email-icon-dark, #github-icon-dark {
+    display: none;
 }
 
 section {
@@ -263,4 +271,72 @@ a:hover {
 #Connect img {
     height: 25px;
     width: auto;
+}
+
+/* Theme Toggle */
+
+.theme-toggle {
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.theme-toggle img {
+    width: 35px;
+}
+
+/* Dark Mode */
+
+body.dark-mode {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode nav {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode h1 {
+    color: var(--heading-1-dark);
+}
+
+body.dark-mode h2 {
+    color: var(--heading-2-dark);
+}
+
+body.dark-mode nav ul li a {
+    color: var(--heading-3-dark);    
+}
+
+body.dark-mode nav ul li a:hover {
+    background-color: var(--button-dark);
+    color: var(--background-dark);
+}
+
+body.dark-mode p,
+body.dark-mode ul {
+    color: var(--text-1-dark);
+}
+
+body.dark-mode a {
+    color: var(--button-dark);
+}
+
+body.dark-mode a:hover {
+    color: var(--accent-dark);
+}
+
+body.dark-mode #Experience .job-dates,
+body.dark-mode #Experience .job-position {
+    color: var(--heading-2-dark);
+}
+
+body.dark-mode #Experience .job-title,
+body.dark-mode #Experience .job-location {
+    color: var(--heading-3-dark);
+}
+
+body.dark-mode #Experience .job-description {
+    color: var(--text-1-dark);
 }
