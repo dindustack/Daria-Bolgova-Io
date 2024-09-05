@@ -37,9 +37,9 @@ nav ul li a {
 .wrapper {
     margin-top: 60px; 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1.5fr;
     gap: 20px;
-    grid-template-rows: 50px, 90px, 200px, 30px;
+    grid-template-rows: 50px, 90px, 300px, 30px;
 }
 
 #Name {
@@ -57,20 +57,33 @@ nav ul li a {
     grid-row: 3;
 }
 
-#Connect {
+#Skills {
     grid-column: 1;
     grid-row: 4;
+}
+
+#Projects {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+#Connect {
+    grid-column: 1;
+    grid-row: 6;
 }
 
 #Photo {
     grid-column: 2;
     grid-row: 1 / 5;
+    position: fixed;
+    top: 42%;
+    left: calc(75% - 150px);
+    transform: translateY(-50%);
 }
 
 #Photo img {
     width: 300px;
     height: auto;
-    margin-top: 30px; 
 }
 
 h1, h2 {
@@ -110,9 +123,73 @@ ul {
     padding: 0;
 }
 
+#Experience .job {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#Experience .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#Experience .job-title {
+    font-weight: 700;
+    color: #2c6e49;
+    font-family: "Bona Nova SC", serif;
+}
+
+#Experience .job-location {
+    font-weight: 600;
+    color: #2c6e49;
+    font-family: "Bona Nova SC", serif;
+}
+
+#Experience .job-dates {
+    font-weight: 600;
+    color: #4c956c;
+    font-family: "Bona Nova SC", serif;
+    text-align: right;
+}
+
+#Experience .job-details {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#Experience .job-position {
+    font-weight: 600;
+    color: #4c956c;
+    font-family: "Bona Nova SC", serif;
+}
+#Experience .job-description {
+    font-weight: 450;
+    color: #795e56;
+    font-family: "Wittgenstein", serif;
+    margin-left: 0px;
+}
+
 #Connect {
     display: flex;
+    flex-direction: column;
+    align-items: left;
     margin-top: 20px;
+}
+
+#Connect ul {
+    display: flex;
+    justify-content: left;
+    gap: 30px;
+    padding: 0;
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+#Connect li {
+    list-style: none;
 }
 
 #Connect img {
@@ -120,7 +197,3 @@ ul {
     width: auto;
 }
 
-#Connect ul {
-    display: flex;
-    gap: 30px;
-}
