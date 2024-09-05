@@ -78,9 +78,15 @@ nav ul li a {
     margin: 0px;
     padding: 15px;
     display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+}
+
+nav ul li a:hover {
+    background-color: var(--button-light);
+    color: var(--background-light);
 }
 
 h1, h2 {
@@ -118,6 +124,15 @@ ul {
     margin: 0;
     margin-left: 70px;
     padding: 0;
+}
+
+a {
+    color: var(--button-light);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-light);
 }
 
 /* Main Page Layout */
