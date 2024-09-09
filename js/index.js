@@ -1,3 +1,4 @@
+// Theme toggle
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const darkIcon = document.getElementById('dark-icon');
@@ -11,6 +12,7 @@ const emailIconDark = document.getElementById('email-icon-dark');
 const githubIconLight = document.getElementById('github-icon-light');
 const githubIconDark = document.getElementById('github-icon-dark');
 
+// Theme toggle click handler
 themeToggle.addEventListener('click', function() {
     body.classList.toggle('dark-mode');
     
@@ -43,3 +45,25 @@ themeToggle.addEventListener('click', function() {
     sound.currentTime = 0;
     sound.play();
 });
+
+// Hamburger menu and navigation
+const menuToggle = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav ul');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+// Toggle the visibility of the menu when clicking the hamburger
+menuToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('show');
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        navLinks.forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+        // Delay before hiding the menu
+        setTimeout(() => {
+            navMenu.classList.remove('show');
+        }, 200);
+    });
+});
+
