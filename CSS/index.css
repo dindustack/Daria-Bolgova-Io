@@ -68,6 +68,7 @@ section {
 
 nav {
     position: fixed;
+    height: 40px;
     top: 0;
     left: 0;
     width: 100%;
@@ -387,10 +388,7 @@ ul {
 
 @media (max-width: 900px) {
     
-    nav {
-        position: fixed;
-        height: 40px;
-    }
+   
 
     body.dark-mode nav::before {
         background-color: var(--background-dark);
@@ -402,7 +400,7 @@ ul {
         background: none;
         border: none;
         cursor: pointer;
-        position: fixed;
+        position: absolute;
         top: 0px;
         left: 30px;
         color: var(--text-2-light);
@@ -423,7 +421,7 @@ ul {
         top: 25px;
         right: 50px;
         z-index: var(--z-index-toggle);
-        height: 30px;
+        height: 40px;
     }
 
     nav ul {
